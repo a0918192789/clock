@@ -1,0 +1,93 @@
+body{
+  margin: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container{
+  width: 40rem;
+  height: 40rem;
+  border-radius: 50%;
+  background-image: url(1.jpg);
+  background-size: cover;
+  border: 5px solid hsl(186, 58%, 22%);
+  box-shadow: -10px 5px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.num span{  /* .num下所有的span */
+  font-size: 2.2rem;
+  color: rgb(102, 125, 147);
+  position: absolute;
+}
+
+.twe{  
+  top: 1rem;
+  left: 50%;
+  transform: translate(-50%);   
+  /* 改變視覺格式化模型: 平移 */
+}
+
+.thr{  
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+}
+
+.six{ 
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.nine{
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+}
+
+.clock{
+  /* outline: 2px solid red; */
+  width: 40rem;
+  height: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock::before{
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: hsl(186, 58%, 22%);
+  z-index: 4;
+}
+
+.clock div{
+  position: absolute;
+  transform-origin: bottom center;   
+  /* 設置元素轉換的原點 */
+
+  width: 7px;
+  height: 190px;
+  bottom: 50%;
+  background-color: rgb(81, 162, 169);
+  border-radius: 50% 50% 0 0;
+}
+
+.clock .hour{   /*專門針對.hour*/
+  height: 120px;
+  transform: rotate(60deg);
+}
+
+.clock .sec{
+  width: 2px;
+  height: 200px;
+  
+  background-color: rgb(249, 212, 3);
+  transform: rotate(80deg);
+}
