@@ -91,3 +91,38 @@ body{
   background-color: rgb(249, 212, 3);
   transform: rotate(80deg);
 }
+
+@media(max-width: 400px){
+  .container{
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .num span{  
+    font-size: 1.2rem;
+  }
+
+  .clock{
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .clock::before{
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  .clock div{
+    height:140px;
+  }
+
+  .clock .hour{  
+    height: 90px;
+  }
+
+  .clock .sec{
+    
+    height: 140px;
+  }
+}
